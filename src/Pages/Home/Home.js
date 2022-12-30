@@ -7,18 +7,19 @@ import Grid from '@mui/material/Grid';
 import { useState } from 'react';
 import HomeExtra from './SingleCar/HomeExtra/HomeExtra';
 import Review from './Review/Review';
-import { Container } from '@mui/material';
+import { Container, Skeleton, Stack } from '@mui/material';
 const Home = () => {
     const [cars,setCars]=useState([]);
+    
     useEffect(()=>{
-        fetch('https://floating-lowlands-50520.herokuapp.com/cars')
+        fetch('http://localhost:9000/cars')
         .then(res=>res.json())
         .then(data=>setCars(data.slice(0,6)))
     },[]);
 
     const [reviews,setReviews]=useState([])
      useEffect(()=>{
-        fetch('https://floating-lowlands-50520.herokuapp.com/reviews')
+        fetch('http://localhost:9000/reviews')
         .then(res=>res.json())
         .then(data=>setReviews(data))
         
@@ -32,7 +33,19 @@ const Home = () => {
             <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         
-         {cars.map(data=><SingleCar data={data} ></SingleCar>)}
+         {cars.map((data,i)=>
+         
+       data ?  <SingleCar key={i} data={data} ></SingleCar> 
+       :   <Stack spacing={1}>
+       {/* For variant="text", adjust the height via font-size */}
+       <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+       {/* For other variants, adjust the size with `width` and `height` */}
+       <Skeleton variant="circular" width={40} height={40} />
+       <Skeleton variant="rectangular" width={210} height={60} />
+       <Skeleton variant="rounded" width={210} height={60} />
+     </Stack>
+        
+         )}
         
         
       </Grid>
@@ -44,7 +57,7 @@ const Home = () => {
       <Grid container rowSpacing={2}  >
         
       {
-          reviews.map(data=><Review data={data}></Review>)
+          reviews.map((data,i)=><Review key={i}  data={data}></Review>)
       }  
         
       </Grid>

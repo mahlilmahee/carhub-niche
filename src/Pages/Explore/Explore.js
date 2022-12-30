@@ -6,13 +6,15 @@ import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import SingleCar from './../Home/SingleCar/SingleCar';
+import useAuth from '../Hooks/Auth/useAuth';
 const Explore = () => {
+    const {user}=useAuth()
     const [cars,setCars]=useState([])
     useEffect(()=>{
-        fetch('https://floating-lowlands-50520.herokuapp.com/explore')
+        fetch('http://localhost:9000/explore')
         .then(res=>res.json())
         .then(data=>setCars(data))
-    },[])
+    },[user])
     return (
         <div>
             <NagigationTopForUnique></NagigationTopForUnique>

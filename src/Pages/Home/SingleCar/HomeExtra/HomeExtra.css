@@ -5,8 +5,21 @@
     padding: 10px;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 10px  10px 10px firebrick;
+    box-shadow: 10px  10px 10px rgb(189, 182, 182);
 }
 .boxstyle img{
     border-radius: 10px;
+}
+.rotation{
+    animation:rotation 10s ease-in-out infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation{
+    from{
+        transform:rotateX(312deg)
+    }
+    to{
+        transform:rotateY(126deg)
+    }
 }

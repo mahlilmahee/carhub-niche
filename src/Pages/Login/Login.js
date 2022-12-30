@@ -1,8 +1,8 @@
 import React from 'react';
 import NagigationTopForUnique from '../../Components/Navigation/NagigationTopForUnique';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import image from '../../images/images.jpg'
 import TextField from '@mui/material/TextField';
@@ -14,12 +14,12 @@ import useAuth from '../Hooks/Auth/useAuth';
 import Alert from '@mui/material/Alert';
 const Login = () => {
 
-    const Item = styled(Paper)(({ theme }) => ({
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-      }));
+    // const Item = styled(Paper)(({ theme }) => ({
+    //     ...theme.typography.body2,
+    //     padding: theme.spacing(1),
+    //     textAlign: 'center',
+    //     color: theme.palette.text.secondary,
+    //   }));
 
 const [logindata,SetLoginData]=useState({});
 const {emailLogin, success,error} =useAuth();

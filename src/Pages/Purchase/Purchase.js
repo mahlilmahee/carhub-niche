@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NagigationTopForUnique from './../../Components/Navigation/NagigationTopForUnique';
 import { useState } from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import svg from '../../images/svgcar.svg'
 import { useForm } from "react-hook-form";
@@ -15,16 +15,16 @@ const Purchase = () => {
     const {user}=useAuth()
     const [car,setCar]=useState({});
     useEffect(()=>{
-        fetch(`https://floating-lowlands-50520.herokuapp.com/cars/${id}`)
+        fetch(`http://localhost:9000/cars/${id}`)
         .then(res=>res.json())
         .then(data=>setCar(data))
-    },[]);
+    },[id]);
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data =>{
         // console.log(data)
         data.carName=car.name;
         data.status="pending"
-        fetch('https://floating-lowlands-50520.herokuapp.com/users',{
+        fetch('http://localhost:9000/users',{
             method:"POST",
             headers:{
                 "content-type":'application/json'

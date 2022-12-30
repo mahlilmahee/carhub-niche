@@ -11,6 +11,7 @@ import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard';
 function App() {
+  
   return (
     <div className="App" style={{overflow:'hidden'}}>
       <AuthProvider>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import useAuth from './../../Hooks/Auth/useAuth';
 import './MyOrder.css'
-import Alert from '@mui/material/Alert';
+// import Alert from '@mui/material/Alert';
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -14,16 +14,16 @@ import Paper from '@mui/material/Paper';
 const MyOrder = () => {
     const [orders,setOrders]=useState([]);
     const {user}=useAuth();
-    const [id,setId]=useState('')
+    // const [id,setId]=useState('')
     useEffect(()=>{
-        fetch(`https://floating-lowlands-50520.herokuapp.com/myorders?email=${user.email}`)
+        fetch(`http://localhost:9000/myorders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=>setOrders(data))
-    },[])
+    },[user])
     const handlingDeleting=(id)=>{
         const permission =window.confirm(' Are you sure to delete your order')
         if(permission){
-            fetch(`https://floating-lowlands-50520.herokuapp.com/myorders/${id}`,
+            fetch(`http://localhost:9000/myorders/${id}`,
     {      method:"DELETE"  })
     .then(res=>res.json())
     .then(data=> {

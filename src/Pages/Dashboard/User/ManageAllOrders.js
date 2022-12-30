@@ -13,22 +13,25 @@ const ManageAllOrders = () => {
     const [orders,setOrders]=useState([]);
     const [status,setStatus]=useState(false)
     useEffect(()=>{
-        fetch('https://floating-lowlands-50520.herokuapp.com/allOrders')
+        fetch('http://localhost:9000/allOrders')
         .then(res=>res.json())
-        .then(data=>setOrders(data))
+        .then(data=>{
+          setOrders(data)
+          console.log(data,'eije ami ')
+        })
     },[]);
 
     const handlingstatus=(id)=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`https://floating-lowlands-50520.herokuapp.com/allOrders/${id}`,{
+          fetch(`http://localhost:9000/allOrders/${id}`,{
        method:"PUT",
    })
    .then(res=>res.json())
    .then(data=>{
        if(data.modifiedCount){
        setStatus(true);
-       fetch('https://floating-lowlands-50520.herokuapp.com/allOrders')
+       fetch('http://localhost:9000/allOrders')
        .then(res=>res.json())
        .then(data=>setOrders(data))
        }
@@ -43,7 +46,7 @@ const ManageAllOrders = () => {
     const handlingDelete=id=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`https://floating-lowlands-50520.herokuapp.com/allOrders/${id}`,{
+          fetch(`http://localhost:9000/allOrders/${id}`,{
        method:"DELETE",
    })
    .then(res=>res.json())

@@ -12,14 +12,14 @@ import Paper from '@mui/material/Paper';
 const ManageProducts = () => {
     const [products,setProducts]=useState([]);
     useEffect(()=>{
-        fetch('https://floating-lowlands-50520.herokuapp.com/explore')
+        fetch('http://localhost:9000/explore')
        .then(res=>res.json())
        .then(data=>setProducts(data))
     },[]);
     const handlingDelete=id=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`https://floating-lowlands-50520.herokuapp.com/admindelete/${id}`,{
+          fetch(`http://localhost:9000/admindelete/${id}`,{
        method:"DELETE",
    })
    .then(res=>res.json())

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+// import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { useState } from 'react';
 import Alert from '@mui/material/Alert';
@@ -12,7 +12,7 @@ const AddAProducts = () => {
     const onSubmit=data=>{
         const confirm =window.confirm('Are you sure to add a new product ')
         if(confirm){
-          fetch('https://floating-lowlands-50520.herokuapp.com/cars',{
+          fetch('http://localhost:9000/cars',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -37,7 +37,7 @@ const AddAProducts = () => {
             <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}  sx={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:"10px"}}>
         <Grid item xs={12} sm={12} md={6} lg={6}>
-        <img  src={imbb} className="img-fluid" alt="This is an image " />
+        <img  src={imbb} className="img-fluid" alt="coolness " />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
             <h3 className="my-2"> Add your products information here </h3>

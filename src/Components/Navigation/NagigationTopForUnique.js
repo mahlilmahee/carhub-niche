@@ -23,7 +23,7 @@ const NagigationTopForUnique = () => {
    <Link to="/explore" className="nav-link active" aria-current="page">Explore</Link>
    </li>
    {
-          user.email && <li className="nav-item">
+          user?.email && <li className="nav-item">
           <Link to="/dashboard" className="nav-link active" aria-current="page">Dashboard</Link>
           </li>
         }
