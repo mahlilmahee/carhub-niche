@@ -1,0 +1,95 @@
+.newsdiv{
+    background-color: rgb(188, 226, 226);
+    width: 100;
+    height:400px;
+    position: relative;
+    border-radius: 40px;
+    margin:100px 10px;
+}
+.newsdiv h2{
+    font-size:3rem;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+.newsdiv input {
+    border: 3px solid rgb(115, 117, 116);
+    width:40%;
+border-radius: 40px;
+text-align: center;
+font-variant:small-caps;
+    height: 50px;
+    box-sizing: border-box;
+    display:inline-block;
+}
+h2{
+    /* margin-top: 100px; */
+    margin-bottom: 30px;
+}
+.newsdiv button{
+    width: 200px;
+    display: block;
+    margin:10px auto;height: 60px;
+    /* border-radius: 20px; */
+border: none;    
+}
+.imgtwo{
+    width: 250px;
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+    
+}
+.middleit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:100px auto;
+    padding:70px
+    /* align-content: center; */
+}
+.imageone{
+    width: 240px;
+    right: 0;
+    top:0;
+    position: absolute;
+}
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #000000 0%, #e74c3c  51%, #000000  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+
+
+  @media screen and (max-width: 600px) {
+   .imageone{
+    width: 100px;
+   }
+   .imgtwo{
+    width: 100px;
+   }
+  .newsdiv h2{
+    font-size: 2.57rem;
+   }
+ .newsdiv  input{
+    width: 80%;
+   }
+  }

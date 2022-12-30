@@ -11,7 +11,7 @@
     border-radius: 10px;
 }
 .rotation{
-    animation:rotation 10s ease-in-out infinite;
+    animation:rotation 20s ease-in-out infinite;
     animation-iteration-count: infinite;
 }
 

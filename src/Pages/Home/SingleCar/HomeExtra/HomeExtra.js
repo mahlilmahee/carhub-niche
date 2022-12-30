@@ -18,7 +18,7 @@ const HomeExtra = () => {
             <h2  className='my-5 text-success'> Finalize your Idea With us.</h2>
         <Grid container className='boxstyle my-5' spacing={2} sx={{display:'flex', justifyContent:'center', alignItems:'center', marginBottom:"10px"}}>
           <Grid item xs={12} sm={12} md={7} lg={7}>
-           <img className='img-fluid rotation' src="https://i.ibb.co/qNF9Q4Q/tgcar.png" alt="" />
+           <img className='img-fluid rotation' src="https://i.ibb.co/XS7X5T0/Sports-Car-Transparent-Images.png" alt="" />
           </Grid>
           <Grid item xs={12} sm={12} md={5} lg={5} sx={{textAlign:'center'}}>
             <h4> Wanna make your own designing car ???</h4>
