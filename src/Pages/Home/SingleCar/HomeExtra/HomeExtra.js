@@ -22,7 +22,7 @@ const HomeExtra = () => {
           </Grid>
           <Grid item xs={12} sm={12} md={5} lg={5} sx={{textAlign:'center'}}>
             <h4> Wanna make your own designing car ???</h4>
-            <h3> Give your design to us . Our Experts will give it a perfect look.</h3>
+            {/* <h3> Give your design to us . Our Experts will give it a perfect look.</h3> */}
             <h5> Our experts have a 20 years of huge experience on this field. So , if you wanna make your own dream car then why late Contact with us.</h5>
           </Grid>
          

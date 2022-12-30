@@ -1,13 +1,24 @@
 .singleCar{
-    border: 1px solid rgb(85, 85, 85);
-    border-radius: 10px;
+    /* border: 1px solid rgb(85, 85, 85); */
+    border-radius: 30px;
  
-    /* padding: 20px; */
-    background-image: linear-gradient(to right, rgb(239, 247, 230) , rgb(177, 211, 231));
+
+    background-image: linear-gradient(to right, #f3fffb , #484849);
     overflow: hidden;
-    
+   box-sizing: border-box;
+    box-shadow: 10px 10px 20px rgb(155, 152, 152);    
 }
 .singleCar:hover{
     /* background-image: linear-gradient(to right, rgb(210, 231, 235) , rgb(11, 255, 182)); */
     transform: scale(1.03);
+    transition: 2s;
+}
+.singlecar:hover{
+    transform: scale(1.7);
+    transition: 2s;
+}
+
+.singlecar{
+    border-radius: 20px;
+    
 }

@@ -25,7 +25,7 @@ const SingleCar = (props) => {
       lg={5}
       className="singleCar"
     >
-     { image? <img src={image} className="img-fluid" alt="" /> :
+     { image? <img src={image} className="img-fluid singlecar" alt="" /> :
       <Skeleton
         sx={{ bgcolor: "grey.700" }}
         variant="rectangular"
@@ -33,7 +33,7 @@ const SingleCar = (props) => {
         height={318}
       />}
     { name ? <h3> {name}</h3> :   <Skeleton animation="wave" />}
-      <h5>Have a look on it: {description.slice(0, 150)}</h5>
+      {/* <h5>Have a look on it: {description.slice(0, 150)}</h5> */}
       <h3> Price: ${price}</h3>
       <Button variant="contained" onClick={handlingPurchase} color="primary">
         Purchase
