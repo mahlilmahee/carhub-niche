@@ -53,7 +53,11 @@ const Purchase = () => {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
         <form onSubmit={handleSubmit(onSubmit)}>
-      <input className="w-75 mb-2" defaultValue={user.displayName} placeholder="your name" {...register("name", { required: true })} /> <br />
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-start'}}>
+        <label style={{marginLeft:'20px'}} for="name">DisplayName</label>
+      <input className="w-75 mb-2" defaultValue={user.displayName} placeholder="your name" {...register("name", { required: true })} /> 
+        </div>
+        <br />
       <input className="w-75 mb-2" defaultValue={user.email} placeholder="Email" {...register("email", { required: true})} /> <br />
       <input className="w-75 mb-2" placeholder="Address" {...register("address", { required: true})} /> <br />
       <input className="w-75 mb-2" placeholder="Phone Number" {...register("phoneNumber", { required: true})} /> <br />

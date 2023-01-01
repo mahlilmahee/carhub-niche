@@ -13,8 +13,8 @@ const Accord = () => {
       setExpanded(isExpanded ? panel : false);
     };
     return (
-        <div>
-            <Grid container spacing={2}>
+        <div >
+            <Grid container className='accord' spacing={2}>
   <Grid xs={12} md={6} lg={6}>
   <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
@@ -23,7 +23,7 @@ const Accord = () => {
           id="panel1bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+           About us
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
         </AccordionSummary>
@@ -42,7 +42,7 @@ const Accord = () => {
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            You are currently not an owner
+            Our main goal is customar satisfaction
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -60,7 +60,7 @@ const Accord = () => {
           id="panel3bh-header"
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Advanced settings
+           Affordable price
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             Filtering has been entirely disabled for whole web server
@@ -90,7 +90,7 @@ const Accord = () => {
       </Accordion>
   </Grid>
   <Grid xs={12} md={6} lg={6}>
-<img src="https://i.ibb.co/dMLsgGd/innercar-removebg.png" alt="" />
+<img src="https://i.ibb.co/dMLsgGd/innercar-removebg.png" width="90%" style={{borderRadius:'20px'}} height='70%' alt="" />
   </Grid>
 </Grid>
         </div>

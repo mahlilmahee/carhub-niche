@@ -1,0 +1,18 @@
+.carousel-root{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.css-1eneg7g-MuiGrid-root>.MuiGrid-item {
+    padding-left: 32px;
+}
+@media screen and (max-width: 600px) {
+    Carousel{
+        width:100%
+    }
+    .jumka{
+        width:100%
+    }
+     }
