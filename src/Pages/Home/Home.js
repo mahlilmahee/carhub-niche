@@ -49,23 +49,32 @@ const Home = () => {
           style={{ margin: "2px auto", justifyContent: "center" }}
           sx={{ p: 0 }}
         >
-          {cars.map((data, i) =>
-            data ? (
-              <SingleCar key={i} data={data}></SingleCar>
-            ) : (
-              <Stack spacing={1}>
-                {/* For variant="text", adjust the height via font-size */}
-                <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
-                {/* For other variants, adjust the size with `width` and `height` */}
-                <Skeleton variant="circular" width={40} height={40} />
-                <Skeleton variant="rectangular" width={210} height={60} />
-                <Skeleton variant="rounded" width={210} height={60} />
-              </Stack>
+          {cars.length > 0 ? (
+            cars?.map((data, i) =>
+              data ? (
+                <SingleCar key={i} data={data}></SingleCar>
+              ) : (
+                <Box sx={{ width: 400 }}>
+                  <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
+                  {/* For other variants, adjust the size with `width` and `height` */}
+                  <Skeleton variant="circular" width={40} height={40} />
+                  <Skeleton variant="rectangular" width={210} height={60} />
+                  <Skeleton variant="rounded" width={210} height={60} />
+                </Box>
+              )
             )
+          ) : (
+            <Box sx={{ width: 900 }}>
+              <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
+              {/* For other variants, adjust the size with `width` and `height` */}
+              <Skeleton variant="circular" width={40} height={40} />
+              <Skeleton variant="rectangular" width={210} height={60} />
+              <Skeleton variant="rounded" width={210} height={60} />
+            </Box>
           )}
         </Grid>
       </Box>
-     
+
       <Newsletter></Newsletter>
       <Accord></Accord>
       <h1 className="my-5 text-info fs-italic">
@@ -92,9 +101,16 @@ const Home = () => {
             infiniteLoop="true"
             autoPlay={true}
           >
-            {reviews.map((data, i) => (
+            { reviews.length>0 ? reviews.map((data, i) => (
               <Review key={i} data={data}></Review>
-            ))}
+            ))   : <Box sx={{w:400}}>
+              <Skeleton></Skeleton>
+              <Skeleton></Skeleton>
+              <Skeleton></Skeleton>
+              <Skeleton></Skeleton>
+              <Skeleton></Skeleton>
+              <Skeleton></Skeleton>
+              </Box>}
             {/* </Grid> */}
           </Carousel>
         </Box>

@@ -1,18 +1,55 @@
 .details{
-    border: 2px solid black;
-    box-shadow: 5px;
-    background-color: rgb(240, 235, 228);
-    padding: 15px;
-    border-radius: 10px;
+   
+    padding: 25px;
+    border-radius: 30px;
     margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
-input{
-   border: 4px solid black;
-   border-radius: 20px;
+.details img{
+    border-radius:50px;
+    width: 40%;
+}
+.details img:hover{
+    border-radius:50px;
+    transition: 3s;
+    width: 100%;
+}
+ .inputlabel input{
+    border: 5pt solid linear-gradient(rgba(255, 209, 2, 0.966), rgb(180, 19, 255));
+   border-radius: 10px;
    height: 40px;
+   background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253, 29, 29, 0.884) 50%, rgba(228, 156, 56, 0.884) 100%);
    display:block;
-
+   
+color:rgb(0, 0, 0);
+font-size: 1.2rem;
+font-weight: 800;
 }
 input[type='submit']{
     width: 50%;
+}
+.inputlabel{
+    display: flex;
+                  font-weight: 700;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Times New Roman', Times, serif;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+  }
+.animate{
+
+animation: example 5s linear infinite alternate;
+  }
+
+@keyframes example {
+    from{
+        transform: rotateX(42deg)
+    }
+    to{
+        transform: rotateX(-26deg)
+    }
 }

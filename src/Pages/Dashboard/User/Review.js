@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from './../../Hooks/Auth/useAuth';
+import './dashrev.css'
 const Review = () => {
   const {user}=useAuth()
     const { register, handleSubmit ,reset} = useForm();
@@ -27,7 +28,7 @@ const Review = () => {
      }
   };
     return (
-        <div>
+        <div className="dashrev" >
               <form onSubmit={handleSubmit(onSubmit)}>
       <input className="mb-2" placeholder="your name" defaultValue={user.displayName} {...register("name", { required: true })} /> <br />
       <input  className="mb-2" placeholder=" your experience" {...register("description", { required: true })} /> <br />

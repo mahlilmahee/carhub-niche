@@ -11,6 +11,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Box, Skeleton } from '@mui/material';
 const MyOrder = () => {
     const [orders,setOrders]=useState([]);
     const {user}=useAuth();
@@ -62,7 +63,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
         return (
         <div>
 
-<h3 className="my-3"> Your orders are here . Please have a look on this .</h3>
+{/* <h3 className="my-3"> Your orders are here . Please have a look on this .</h3> */}
 <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
@@ -75,7 +76,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {orders.map((row) => (
+          { orders.length>0 ?  orders.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
@@ -86,7 +87,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
               <StyledTableCell align="right"> <button > {row.status}  </button> </StyledTableCell>
              
             </StyledTableRow>
-          ))}
+          ))
+        : <Box sx={{ width: 1000 }}>
+        <Skeleton />
+        
+      </Box>
+        }
         </TableBody>
       </Table>
     </TableContainer>

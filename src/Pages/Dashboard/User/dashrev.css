@@ -1,0 +1,11 @@
+.dashrev{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.dashrev input{
+    width: 70%;
+    height: 50px;
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgb(95, 91, 93) 0%, rgb(102, 103, 104) 100%);
+    margin:12px auto
+}

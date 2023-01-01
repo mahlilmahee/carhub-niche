@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import './Dashboard.css'
 // import InboxIcon from '@mui/icons-material/MoveToInbox';
 // import List from '@mui/material/List';
 // import ListItem from '@mui/material/ListItem';
@@ -42,27 +43,27 @@ function Dashboard(props) {
     <div>
      
       <Toolbar />
-      {user.email && <h5>Email:{user.email} </h5> }
+      {user.email && <h5>{user.email} </h5> }
       <Divider />
-      <Link to="/home"><Button variant="contained" color="success" sx={{mx:2, my:1}}>Home</Button> </Link>
+      <Link to="/home"><Button variant="contained" color="success" className='btn-grad' sx={{mx:2, my:1}}>GO Back</Button> </Link>
       {
         !admin ? <Box>
-      <Link to={`${url}/myOrder`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>My Order</Button> </Link>
-      <Link to={`${url}/review`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>Review</Button> </Link>
-      <Link to={`${url}/payment`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>Payment</Button> </Link>
+      <Link to={`${url}/myOrder`}><Button className='btn-grad' variant="contained" color="success" sx={{mx:2 , my:1}}>My Order</Button> </Link>
+      <Link to={`${url}/review`}><Button className='btn-grad' variant="contained" color="success" sx={{mx:2 , my:1}}>Review</Button> </Link>
+      <Link to={`${url}/payment`}><Button variant="contained" className='btn-grad' color="success" sx={{mx:2 , my:1}}>Payment</Button> </Link>
         </Box> :
       <Box> 
-     <Link to={`${url}/addAdmin`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>Add Admin</Button> </Link>
-      <Link to={`${url}/addProducts`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>Add A Products</Button> </Link>
-      <Link to={`${url}/manageAllOrders`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>Manage All Orders</Button> </Link>
-      <Link to={`${url}/manageProducts`}><Button variant="contained" color="success" sx={{mx:2 , my:1}}>ManageProducts</Button> </Link>
+     <Link to={`${url}/addAdmin`}><Button variant="contained" color="success" className='btn-grad' sx={{mx:2 , my:1}}>Add Admin</Button> </Link>
+      <Link to={`${url}/addProducts`}><Button variant="contained" color="success" className='btn-grad' sx={{mx:2 , my:1}}>Add A Products</Button> </Link>
+      <Link to={`${url}/manageAllOrders`}><Button variant="contained" color="success" className='btn-grad' sx={{mx:2 , my:1}}>Manage All Orders</Button> </Link>
+      <Link to={`${url}/manageProducts`}><Button variant="contained" color="success" className='btn-grad' sx={{mx:2 , my:1}}>ManageProducts</Button> </Link>
         </Box>
       }
       
       
       <Divider />
       
-     <Button variant="contained" onClick={signOutUser} color="success" sx={{mx:2 , my:1}}>Logout</Button>
+     <Button variant="contained" onClick={signOutUser} className='btn-grad' color="success" sx={{mx:2 , my:1}}>Logout</Button>
       <Divider />
       
     </div>
