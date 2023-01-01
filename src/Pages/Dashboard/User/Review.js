@@ -9,7 +9,7 @@ const Review = () => {
      console.log(data);
      const confirmation =window.confirm('are you sure to submit this? ? ? ');
      if(confirmation){
-       fetch('http://localhost:9000/reviews',{
+       fetch('https://carhub-server-side.vercel.app/reviews',{
         method:"POST",
         headers:{
             "content-type":'application/json'

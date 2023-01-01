@@ -12,14 +12,14 @@ import Paper from '@mui/material/Paper';
 const ManageProducts = () => {
     const [products,setProducts]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:9000/explore')
+        fetch('https://carhub-server-side.vercel.app/explore')
        .then(res=>res.json())
        .then(data=>setProducts(data))
     },[]);
     const handlingDelete=id=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`http://localhost:9000/admindelete/${id}`,{
+          fetch(`https://carhub-server-side.vercel.app/admindelete/${id}`,{
        method:"DELETE",
    })
    .then(res=>res.json())

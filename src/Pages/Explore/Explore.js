@@ -12,7 +12,7 @@ const Explore = () => {
     const {user}=useAuth()
     const [cars,setCars]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:9000/explore')
+        fetch('https://carhub-server-side.vercel.app/explore')
         .then(res=>res.json())
         .then(data=>setCars(data))
     },[user])

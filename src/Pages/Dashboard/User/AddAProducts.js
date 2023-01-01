@@ -12,7 +12,7 @@ const AddAProducts = () => {
     const onSubmit=data=>{
         const confirm =window.confirm('Are you sure to add a new product ')
         if(confirm){
-          fetch('http://localhost:9000/cars',{
+          fetch('https://carhub-server-side.vercel.app/cars',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

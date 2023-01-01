@@ -15,7 +15,7 @@ const Purchase = () => {
   const { user } = useAuth();
   const [car, setCar] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:9000/cars/${id}`)
+    fetch(`https://carhub-server-side.vercel.app/cars/${id}`)
       .then((res) => res.json())
       .then((data) => setCar(data));
   }, [id]);
@@ -24,7 +24,7 @@ const Purchase = () => {
     // console.log(data)
     data.carName = car.name;
     data.status = "pending";
-    fetch("http://localhost:9000/users", {
+    fetch("https://carhub-server-side.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -112,7 +112,7 @@ const Purchase = () => {
               </div>
             
              
-              <input type="submit" value="submit" />
+              <input type="submit" value="submit" className="purchase" />
             </form>
           </Grid>
         </Grid>

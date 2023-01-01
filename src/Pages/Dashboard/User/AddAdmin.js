@@ -14,7 +14,7 @@ const AddAdmin = () => {
         const onSubmit =data=> {
             const confirmation=window.confirm('Do you wanna make him admin ? ')
             if(confirmation){
-                fetch('http://localhost:9000/makeAdmin',{
+                fetch('https://carhub-server-side.vercel.app/makeAdmin',{
            method:'PUT',
            headers:{
                'content-type':'application/json'

@@ -17,14 +17,14 @@ const MyOrder = () => {
     const {user}=useAuth();
     // const [id,setId]=useState('')
     useEffect(()=>{
-        fetch(`http://localhost:9000/myorders?email=${user.email}`)
+        fetch(`https://carhub-server-side.vercel.app/myorders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[user])
     const handlingDeleting=(id)=>{
         const permission =window.confirm(' Are you sure to delete your order')
         if(permission){
-            fetch(`http://localhost:9000/myorders/${id}`,
+            fetch(`https://carhub-server-side.vercel.app/myorders/${id}`,
     {      method:"DELETE"  })
     .then(res=>res.json())
     .then(data=> {

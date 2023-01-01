@@ -13,7 +13,7 @@ const ManageAllOrders = () => {
     const [orders,setOrders]=useState([]);
     const [status,setStatus]=useState(false)
     useEffect(()=>{
-        fetch('http://localhost:9000/allOrders')
+        fetch('https://carhub-server-side.vercel.app/allOrders')
         .then(res=>res.json())
         .then(data=>{
           setOrders(data)
@@ -24,14 +24,14 @@ const ManageAllOrders = () => {
     const handlingstatus=(id)=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`http://localhost:9000/allOrders/${id}`,{
+          fetch(`https://carhub-server-side.vercel.app/allOrders/${id}`,{
        method:"PUT",
    })
    .then(res=>res.json())
    .then(data=>{
        if(data.modifiedCount){
        setStatus(true);
-       fetch('http://localhost:9000/allOrders')
+       fetch('https://carhub-server-side.vercel.app/allOrders')
        .then(res=>res.json())
        .then(data=>setOrders(data))
        }
@@ -46,7 +46,7 @@ const ManageAllOrders = () => {
     const handlingDelete=id=>{
         const confirmation=window.confirm('Are you sure to do this?');
         if(confirmation){
-          fetch(`http://localhost:9000/allOrders/${id}`,{
+          fetch(`https://carhub-server-side.vercel.app/allOrders/${id}`,{
        method:"DELETE",
    })
    .then(res=>res.json())

@@ -12,6 +12,7 @@ import { Typography } from '@mui/material';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../Hooks/Auth/useAuth';
 import Alert from '@mui/material/Alert';
+import './login.css'
 const Login = () => {
 
     // const Item = styled(Paper)(({ theme }) => ({
@@ -59,7 +60,7 @@ const handlingSubmit=e=>{
       <Typography>
       <TextField  onChange={handlingOnChange} sx={{width:'60%'}} id="filled-basic" name="password" label="Your password" variant="outlined" />
       <br />
-      <Button variant="contained" color="success" type="submit">Login</Button> <br />
+      <Button variant="contained" className='btn-grad' color="success" type="submit">Login</Button> <br />
        { 
        success && <Alert severity="success">Login successfully </Alert> 
       }
@@ -88,11 +89,3 @@ export default Login;
 
 
 
-{/* <h1>Please Login Here </h1>
-              <form onSubmit={handlingSubmit}>
-              <TextField id="outlined-basic" onBlur={handlingInput} name="email" label="Email" variant="outlined" /><br />
-          <TextField id="outlined-basic" onBlur={handlingInput} name="password" label="Password" variant="outlined" /> <br />
-          <Button variant="contained" type="submit">Login</Button>
-              </form>
-        <br /><br />
-          <h3> Already users? </h3> */}

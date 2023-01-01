@@ -101,7 +101,7 @@ const useFirebase = () => {
     try{
        if (user?.email) {
       return fetch(
-        `http://localhost:9000/admins/${user?.email}`
+        `https://carhub-server-side.vercel.app/admins/${user?.email}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -117,7 +117,7 @@ const useFirebase = () => {
 
   const saveUserData = (email, displayname, method) => {
     const user = { email, displayName: displayname };
-    fetch("http://localhost:9000/registerUsers", {
+    fetch("https://carhub-server-side.vercel.app/registerUsers", {
       method: method,
       headers: {
         "content-type": "application/json",

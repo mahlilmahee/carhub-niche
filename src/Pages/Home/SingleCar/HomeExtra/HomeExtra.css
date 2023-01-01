@@ -11,15 +11,25 @@
     border-radius: 10px;
 }
 .rotation{
-    animation:rotation 20s ease-in-out infinite;
+    animation:rotation 8s ease-in-out infinite;
     animation-iteration-count: infinite;
 }
 
 @keyframes rotation{
     from{
-        transform:rotateX(312deg)
+        transform:rotateX(0deg);
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform:rotateX(20deg);
+        transform: rotateZ(20deg);
+    }
+    50%{
+        transform:rotateX(40deg);
+        transform: rotateZ(-20deg);
     }
     to{
-        transform:rotateY(126deg)
+        transform:rotateY(0deg);
+        transform: rotateZ(0deg);
     }
 }

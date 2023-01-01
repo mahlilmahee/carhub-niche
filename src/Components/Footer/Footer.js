@@ -9,10 +9,6 @@ import './Footer.css';
 const Footer = () => {
 
    
-      const inputHandling= ()=>{
-        document.getElementById('inputbaba').value='';
-
-      }
 
     return (
         <div className="mt-5" >
@@ -25,9 +21,8 @@ const Footer = () => {
         <h5> Find the latest car for you </h5>
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={4}>
-          <p>Subscribe us for every latest information</p>
-          <input id='inputbaba' type="text" placeholder='your email' />
-          <button onClick={inputHandling}> Send</button>
+          <p>Thank you for with us</p>
+       
         </Grid>
         <Grid item xs={12} sm={12} md={4} lg={4}>
          <p> Follow us on Social Media for every latest news </p>

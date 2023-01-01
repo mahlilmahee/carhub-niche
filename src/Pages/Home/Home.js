@@ -18,14 +18,14 @@ const Home = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9000/cars")
+    fetch("https://carhub-server-side.vercel.app/cars")
       .then((res) => res.json())
       .then((data) => setCars(data.slice(0, 6)));
   }, [cars]);
 
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:9000/reviews")
+    fetch("https://carhub-server-side.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [reviews]);
