@@ -20,3 +20,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  ### what can a admin do . 
  An Admin he can remove anyone's order and can update the status their. Also he can add new car, delete any car. He can make anyone admin . Overall he will have a different dashboard.
  
+ 
+ 
+ ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/https://i.ibb.co/L914vkx/fullbrightone.png?raw=true)
